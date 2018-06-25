@@ -46,7 +46,7 @@ Source-Repository head
 
 Library
   Ghc-Options:      -Wall
-  Hs-Source-Dirs:   lib
+  Hs-Source-Dirs:   src
   Default-language: Haskell2010
 
   Exposed-Modules:
@@ -73,6 +73,8 @@ Library
     Hakyll.Core.Writable
 
   Other-Modules:
+    Data.List.Extended
+    Data.Yaml.Extended
     Hakyll.Core.Compiler.Require
     Hakyll.Core.Identifier.Pattern.Internal
     Hakyll.Core.Item.SomeItem
