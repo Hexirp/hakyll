@@ -11,7 +11,7 @@ flags:
     buildWebsite:  true
 
 packages:
-  - '.'
+  - hakyll
 
 nix:
   enable: false
