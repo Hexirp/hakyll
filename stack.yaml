@@ -18,8 +18,3 @@ nix:
   enable: false
   packages:
     - zlib
-
-build:
-  haddock: true
-  haddock-hyperlink-source: true
-  haddock-deps: false
