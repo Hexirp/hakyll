@@ -43,19 +43,19 @@ import qualified Data.Text.Encoding          as T
 --------------------------------------------------------------------------------
 rssTemplate :: String
 rssTemplate = T.unpack $
-    T.decodeUtf8 $(makeRelativeToProject "data/templates/rss.xml" >>= embedFile)
+    T.decodeUtf8 $(makeRelativeToProject "data\\templates\\rss.xml" >>= embedFile)
 
 rssItemTemplate :: String
 rssItemTemplate = T.unpack $
-    T.decodeUtf8 $(makeRelativeToProject "data/templates/rss-item.xml" >>= embedFile)
+    T.decodeUtf8 $(makeRelativeToProject "data\\templates\\rss-item.xml" >>= embedFile)
 
 atomTemplate :: String
 atomTemplate = T.unpack $
-    T.decodeUtf8 $(makeRelativeToProject "data/templates/atom.xml" >>= embedFile)
+    T.decodeUtf8 $(makeRelativeToProject "data\\templates\\atom.xml" >>= embedFile)
 
 atomItemTemplate :: String
 atomItemTemplate = T.unpack $
-    T.decodeUtf8 $(makeRelativeToProject "data/templates/atom-item.xml" >>= embedFile)
+    T.decodeUtf8 $(makeRelativeToProject "data\\templates\\atom-item.xml" >>= embedFile)
 
 --------------------------------------------------------------------------------
 -- | This is a data structure to keep the configuration of a feed.
