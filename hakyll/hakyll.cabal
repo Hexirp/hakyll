@@ -81,6 +81,7 @@ Library
   Exposed-Modules:
     Hakyll
     Hakyll.Commands
+    Hakyll.Main
     Hakyll.Web.CompressCss
     Hakyll.Web.Feed
     Hakyll.Web.Html
