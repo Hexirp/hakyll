@@ -42,6 +42,7 @@ Build-Type:    Simple
 
 Extra-source-files:
   CHANGELOG.md
+  data/templates/rss.xml
 
 Source-Repository head
   Type:     git
