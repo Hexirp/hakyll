@@ -12,6 +12,7 @@ flags:
 
 packages:
   - hakyll
+  - hakyll-core
 
 nix:
   enable: false
