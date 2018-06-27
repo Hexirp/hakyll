@@ -11,8 +11,7 @@ flags:
     buildWebsite:  true
 
 packages:
-  - .
-  - hakyll-core
+  - '.'
 
 nix:
   enable: false
