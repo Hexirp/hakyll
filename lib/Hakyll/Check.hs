@@ -35,11 +35,9 @@ import qualified Text.HTML.TagSoup            as TS
 #ifdef CHECK_EXTERNAL
 import           Data.List                    (intercalate)
 import           Data.Typeable                (cast)
-import           Data.Version                 (versionBranch)
 import           GHC.Exts                     (fromString)
 import qualified Network.HTTP.Conduit         as Http
 import qualified Network.HTTP.Types           as Http
-import qualified Paths_hakyll                 as Paths_hakyll
 #endif
 
 
@@ -279,7 +277,7 @@ requestExternalUrl url = liftIO $ try $ do
 
         -- Nice user agent info
         ua = fromString $ "hakyll-check/" ++
-             (intercalate "." $ map show $ versionBranch Paths_hakyll.version)
+             (intercalate "." $ map show $ [4, 12, 3, 0])
 #else
 checkExternalUrl url = skip url Nothing
 #endif
