@@ -77,28 +77,6 @@ Library
   Exposed-Modules:
     Hakyll
     Hakyll.Commands
-    Hakyll.Core.Compiler
-    Hakyll.Core.Compiler.Internal
-    Hakyll.Core.Configuration
-    Hakyll.Core.Dependencies
-    Hakyll.Core.File
-    Hakyll.Core.Identifier
-    Hakyll.Core.Identifier.Pattern
-    Hakyll.Core.Item
-    Hakyll.Core.Logger
-    Hakyll.Core.Metadata
-    Hakyll.Core.Provider
-    Hakyll.Core.Provider.Metadata
-    Hakyll.Core.Routes
-    Hakyll.Core.Rules
-    Hakyll.Core.Rules.Internal
-    Hakyll.Core.Runtime
-    Hakyll.Core.Store
-    Hakyll.Core.UnixFilter
-    Hakyll.Core.Util.File
-    Hakyll.Core.Util.String
-    Hakyll.Core.Writable
-    Hakyll.Main
     Hakyll.Web.CompressCss
     Hakyll.Web.Feed
     Hakyll.Web.Html
@@ -113,15 +91,7 @@ Library
     Hakyll.Web.Template.Internal.Trim
     Hakyll.Web.Template.List
 
-    Data.List.Extended
-    Data.Yaml.Extended
     Hakyll.Check
-    Hakyll.Core.Compiler.Require
-    Hakyll.Core.Identifier.Pattern.Internal
-    Hakyll.Core.Item.SomeItem
-    Hakyll.Core.Provider.Internal
-    Hakyll.Core.Provider.MetadataCache
-    Hakyll.Core.Util.Parser
 
   Build-Depends:
     base                 >= 4.8      && < 5,
@@ -152,7 +122,8 @@ Library
     vector               >= 0.11     && < 0.13,
     yaml                 >= 0.8.11   && < 0.9,
     optparse-applicative >= 0.12     && < 0.15,
-    file-embed           >= 0.0.10.1 && < 0.0.11
+    file-embed           >= 0.0.10.1 && < 0.0.11,
+    hakyll-core
 
   If flag(previewServer)
     Build-depends:
