@@ -42,7 +42,10 @@ Build-Type:    Simple
 
 Extra-source-files:
   CHANGELOG.md
+  data/templates/atom.xml
+  data/templates/atom-item.xml
   data/templates/rss.xml
+  data/templates/rss-item.xml
 
 Source-Repository head
   Type:     git
