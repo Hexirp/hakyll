@@ -20,8 +20,8 @@ module Hakyll.Core.Identifier
 
 --------------------------------------------------------------------------------
 import           Control.DeepSeq     (NFData (..))
-import           Data.List           (intercalate)
-import           System.FilePath     (dropTrailingPathSeparator, splitPath)
+import           System.FilePath     (dropTrailingPathSeparator, splitPath,
+                                      joinPath)
 
 
 --------------------------------------------------------------------------------
@@ -64,7 +64,7 @@ instance Show Identifier where
 -- | Parse an identifier from a string
 fromFilePath :: String -> Identifier
 fromFilePath = Identifier Nothing .
-    intercalate "/" . filter (not . null) . split'
+    joinPath . filter (not . null) . split'
   where
     split' = map dropTrailingPathSeparator . splitPath
 
