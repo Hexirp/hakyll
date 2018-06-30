@@ -21,7 +21,8 @@ module Hakyll.Core.Identifier
 --------------------------------------------------------------------------------
 import           Control.DeepSeq     (NFData (..))
 import           Data.List           (intercalate)
-import           System.FilePath     (dropTrailingPathSeparator, splitPath)
+import           System.FilePath     (dropTrailingPathSeparator, splitPath,
+                                      pathSeparator)
 
 
 --------------------------------------------------------------------------------
@@ -33,7 +34,7 @@ import           GHC.Exts            (IsString, fromString)
 --------------------------------------------------------------------------------
 data Identifier = Identifier
     { identifierVersion :: Maybe String
-    , identifierPath    :: String
+    , identifierPath    :: [String]
     } deriving (Eq, Ord, Typeable)
 
 
@@ -64,7 +65,7 @@ instance Show Identifier where
 -- | Parse an identifier from a string
 fromFilePath :: String -> Identifier
 fromFilePath = Identifier Nothing .
-    intercalate "/" . filter (not . null) . split'
+    filter (not . null) . split'
   where
     split' = map dropTrailingPathSeparator . splitPath
 
@@ -72,7 +73,7 @@ fromFilePath = Identifier Nothing .
 --------------------------------------------------------------------------------
 -- | Convert an identifier to a relative 'FilePath'
 toFilePath :: Identifier -> FilePath
-toFilePath = identifierPath
+toFilePath = intercalate [pathSeparator] . identifierPath
 
 
 --------------------------------------------------------------------------------
