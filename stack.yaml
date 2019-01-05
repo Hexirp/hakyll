@@ -23,7 +23,10 @@ build:
   haddock-hyperlink-source: true
   haddock-deps: false
 
-# extra-deps:
+extra-deps:
+- github: Hexirp/lrucache
+  commit: ddb7c3093f11dc5a8ec217edf1ce9ab3a676ab1f
+
 # - 'pandoc-2.4'
 # - 'pandoc-citeproc-0.15'
 # - 'yaml-0.11.0.0'
