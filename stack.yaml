@@ -1,4 +1,4 @@
-resolver: lts-13.0
+resolver: nightly-2019-01-07
 # compiler: ghc-8.4.2
 save-hackage-creds: false
 
@@ -24,9 +24,6 @@ build:
   haddock-deps: false
 
 extra-deps:
-- github: Hexirp/lrucache
-  commit: ddb7c3093f11dc5a8ec217edf1ce9ab3a676ab1f
-
 # - 'pandoc-2.4'
 # - 'pandoc-citeproc-0.15'
 # - 'yaml-0.11.0.0'
