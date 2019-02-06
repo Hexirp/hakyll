@@ -1,4 +1,4 @@
-resolver: lts-13.5
+resolver: nightly-2019-02-06
 save-hackage-creds: false
 
 flags:
@@ -24,6 +24,3 @@ build:
 
 extra-deps:
 - 'lrucache-1.2.0.1'
-- 'pandoc-2.6'
-- 'pandoc-citeproc-0.16'
-- 'ipynb-0.1'
